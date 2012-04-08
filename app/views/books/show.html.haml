@@ -1,6 +1,8 @@
 %p#notice= notice
 
 %h2= @book.title
+=image_tag @book.cover.url(:medium)
+
 %table.table.table-bordered
   %tr
     %th Genre

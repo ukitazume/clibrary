@@ -11,12 +11,6 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20120408115657) do
-
-# Could not dump table "books" because of following StandardError
-#   Unknown type 'has_attached_file' for column 'cover'
-=======
 ActiveRecord::Schema.define(:version => 20120408104209) do
 
   create_table "books", :force => true do |t|
@@ -24,13 +18,16 @@ ActiveRecord::Schema.define(:version => 20120408104209) do
     t.text     "description"
     t.string   "author"
     t.string   "file_name"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.integer  "genre_id"
   end
 
   add_index "books", ["genre_id"], :name => "index_books_on_genre_id"
->>>>>>> ebac5d3dff4245614c8992fb99f9ff4326b9681a
 
   create_table "genres", :force => true do |t|
     t.string   "name"
