@@ -30,10 +30,11 @@
               %li= link_to "Link 3", "/path3"
 
     .container
-
       .content
         .row
           .span9
+            - flash.each do |key, value|
+              %div{:class => "flash #{key}"}= value 
             = yield
           .span3
             .well.sidebar-nav
@@ -45,10 +46,7 @@
                 %li= link_to "Link 3", "/path3"
     
       %footer
-        %p &copy; Company 2012
-    /
-      Javascripts
-      \==================================================
-    / Placed at the end of the document so the pages load faster
+        %hr
+        %p &copy; Nanbook
     = javascript_include_tag "application"
 

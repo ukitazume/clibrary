@@ -11,6 +11,7 @@ gem 'haml-rails'
 
 gem 'kaminari'
 gem "paperclip", "~> 3.0"
+gem "clearance"
 
 
 # Gems used only for assets and not required

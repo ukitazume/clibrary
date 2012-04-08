@@ -1,18 +1,25 @@
 %p#notice= notice
 
 %h2= @book.title
-=image_tag @book.cover.url(:medium)
+%hr
+.span2
+  - if @book.cover.exists?
+    %a.thumbnail=image_tag @book.cover.url(:medium)
+  - else
+    %a.tumbnail=image_tag 'http://placehold.it/150x200'
 
-%table.table.table-bordered
-  %tr
-    %th Genre
-    %td= @book.genre.name
-  %tr
-    %th Author
-    %td= @book.author
-  %tr
-    %th Description
-    %td= @book.description
-= link_to 'Edit', edit_book_path(@book)
-\|
-= link_to 'Back', books_path
+.span6
+  %table.table.table-bordered
+    %tr
+      %th Genre
+      %td= link_to @book.genre.name, {:action => :index, :genre_id => @book.genre_id}
+    %tr
+      %th Author
+      %td=link_to @book.author, {:action => :index, :q => @book.author}
+    %tr
+      %th Description
+      %td= @book.description
+
+  = link_to 'Edit', edit_book_path(@book)
+  \|
+  = link_to 'Back', books_path
