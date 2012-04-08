@@ -11,15 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120408064446) do
+ActiveRecord::Schema.define(:version => 20120408115657) do
 
-  create_table "books", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.string   "author"
-    t.string   "file_name"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+# Could not dump table "books" because of following StandardError
+#   Unknown type 'has_attached_file' for column 'cover'
+
+  create_table "genres", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

@@ -2,7 +2,14 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+    @query = params["q"]
+    @genre_id = params["genre_id"]
+    @genre_id = nil if @genre_id == 'all'
+    page = params[:page] || 0
+
+    @books = Book.page(page)
+    @books = @books.where("title LIKE ? OR author LIKE ?", "%#{@query}%", "%#{@query}%") unless @query.blank?
+    @books = @books.where('genre_id = ?', @genre_id) unless @genre_id.blank?
 
     respond_to do |format|
       format.html # index.html.erb

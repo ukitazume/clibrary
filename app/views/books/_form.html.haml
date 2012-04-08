@@ -1,4 +1,4 @@
-= form_for @book do |f|
+= form_for @book, :html => { :multipart => true } do |f|
   -if @book.errors.any?
     #error_explanation
       %h2= "#{pluralize(@book.errors.count, "error")} prohibited this book from being saved:"
@@ -6,5 +6,15 @@
         - @book.errors.full_messages.each do |msg|
           %li= msg
 
+  = f.label :title
+  = f.text_field :title
+  = f.label :author
+  = f.text_field :author
+  = f.label :file_name
+  = f.text_field :file_name
+  = f.label :cover
+  = f.file_field :cover
+  = f.label :description
+  = f.text_area :description, :class => 'input-xlarge', :rows => 15
   .actions
-    = f.submit 'Save'
+    = f.submit 'Save', {class: 'btn'}

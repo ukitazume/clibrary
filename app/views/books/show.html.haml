@@ -1,6 +1,16 @@
 %p#notice= notice
 
-
+%h2= @book.title
+%table.table.table-bordered
+  %tr
+    %th Genre
+    %td= @book.genre.name
+  %tr
+    %th Author
+    %td= @book.author
+  %tr
+    %th Description
+    %td= @book.description
 = link_to 'Edit', edit_book_path(@book)
 \|
 = link_to 'Back', books_path

@@ -1,16 +1,29 @@
-%h1 Listing books
-
-%table
+%h1= "Books"
+%p= "display count #{@books.count}"
+%form.well.form-search
+  %input.input-medium.search-query{:type => 'text', :name => 'q', :value => @query}
+  %select{:name => 'genre_id'}
+    %option all
+    - Genre.all.each do |genre|
+      %option{:selected => @genre_id.to_i == genre.id, :value => genre.id}= genre.name
+  %button.btn{:type => 'submit'} search
+%table.table.table-bordered
   %tr
-    %th
-    %th
+    %th Title
+    %th Genre
+    %th Author
     %th
 
   - @books.each do |book|
     %tr
+      %th= link_to book.title, book
+      %td= link_to book.genre.name, {:action => :index, :genre_id => book.genre_id}
+      %td= link_to book.author, {:action => :index, :q => book.author}
       %td= link_to 'Show', book
       %td= link_to 'Edit', edit_book_path(book)
       %td= link_to 'Destroy', book, :confirm => 'Are you sure?', :method => :delete
+
+= paginate @books
 
 %br
 
