@@ -199,7 +199,10 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   kaminari
+<<<<<<< HEAD
   paperclip (~> 3.0)
+=======
+>>>>>>> ebac5d3dff4245614c8992fb99f9ff4326b9681a
   pry-rails
   rails (= 3.2.3)
   rspec-rails (~> 2.6)
