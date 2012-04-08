@@ -11,3 +11,41 @@
  *= require_self
  *= require_tree .
 */
+body {
+  background: #B9D7E1 url('canvas-bg.jpg');
+}
+div#ground {
+  background: transparent url('ground.png') left bottom repeat-x;
+  bottom: 0;
+  clear: both;
+  padding: 60px 0 87px;
+  position: fixed;
+  text-align: center;
+  text-shadow: 0 1px 0 #B6DCEA;
+  width: 100%;
+  z-index: -98;
+
+  h2 {
+    font: 600 24px $home_header;
+    color: #649FBA;
+  }
+
+  p {
+    color: #649FBA;
+  }
+
+}
+div#grass {
+  width: 809px;
+  height: 57px;
+  margin: 0 auto;
+  background: transparent url('grass.png') top left no-repeat;
+}
+
+div.row {
+  background-color: #fff;
+  border: 1px solid #90AAB3;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 200px;
+}

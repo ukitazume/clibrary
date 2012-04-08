@@ -14,5 +14,4 @@ CSV.open("#{Rails.root}/var/CommonsLibrary5217.csv").each do |row|
   Book.create({title:row[0], author:row[1], genre_id: genre.id, file_name: row[4].split("/")[-1]})
 end
 
-# User.create(email:"u.kitazume@gmail.com", password:'916916pepe')
-# User.create(email:"kitadume@nanbook.net", password:'pepe0119")
+User.create(email:"test@ex.com", password:'test')
