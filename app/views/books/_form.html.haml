@@ -6,5 +6,13 @@
         - @book.errors.full_messages.each do |msg|
           %li= msg
 
+  = f.label :title
+  = f.text_field :title
+  = f.label :author
+  = f.text_field :author
+  = f.label :file_name
+  = f.text_field :file_name
+  = f.label :description
+  = f.text_area :description, :class => 'input-xlarge', :rows => 15
   .actions
-    = f.submit 'Save'
+    = f.submit 'Save', {class: 'btn'}

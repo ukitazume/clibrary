@@ -2,7 +2,8 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+    page = params[:page] || 0
+    @books = Book.page(page)
 
     respond_to do |format|
       format.html # index.html.erb
