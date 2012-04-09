@@ -59,6 +59,16 @@ class BooksController < ApplicationController
       end
     end
   end
+  
+  def comment
+    @book = Book.find(params[:id])
+    comment = Comment.new(params[:comment])
+    comment.user_id = current_user.id
+    @book.comments << comment
+    @book.save
+
+    redirect_to @book
+  end
 
   # PUT /books/1
   # PUT /books/1.json

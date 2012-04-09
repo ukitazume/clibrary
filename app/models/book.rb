@@ -3,4 +3,5 @@ class Book < ActiveRecord::Base
   paginates_per 50
   belongs_to :genre
   has_attached_file :cover, :styles => { :medium => "150x200>", :thumb => "60x80>" }
+  acts_as_commentable
 end
