@@ -60,4 +60,5 @@ Clibrary::Application.routes.draw do
       post 'comment'
     end
   end
+  root :to => 'books#list'
 end

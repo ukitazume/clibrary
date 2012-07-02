@@ -29,6 +29,4 @@
     = form_for @book.comments.build, :url => {action: :comment}do |f|
       = f.text_area :comment, {class: 'input-xlarge', rows: 3, cols: 5}
       = f.submit 'comment', {class: 'btn'}
-  = link_to 'Edit', edit_book_path(@book)
-  \|
   = link_to 'Back', books_path

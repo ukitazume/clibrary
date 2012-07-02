@@ -13,6 +13,7 @@ gem 'kaminari'
 gem "paperclip", "~> 3.0"
 gem "clearance"
 gem "acts_as_commentable"
+gem 'httpclient'
 
 
 # Gems used only for assets and not required

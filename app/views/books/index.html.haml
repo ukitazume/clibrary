@@ -12,16 +12,12 @@
     %th Title
     %th Genre
     %th Author
-    %th
 
   - @books.each do |book|
     %tr
       %th= link_to book.title, book
       %td= link_to book.genre.name, {:action => :index, :genre_id => book.genre_id}
       %td= link_to book.author, {:action => :index, :q => book.author}
-      %td= link_to 'Show', book
-      %td= link_to 'Edit', edit_book_path(book)
-      %td= link_to 'Destroy', book, :confirm => 'Are you sure?', :method => :delete
 
 = paginate @books
 
