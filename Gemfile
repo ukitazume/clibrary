@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '4.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,7 +11,7 @@ gem 'haml-rails'
 
 gem 'kaminari'
 gem "paperclip", "~> 3.0"
-gem "clearance"
+gem "clearance", ">= 0.16.1"
 gem "acts_as_commentable"
 gem 'httpclient'
 
