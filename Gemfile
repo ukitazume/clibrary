@@ -9,7 +9,7 @@ gem 'mysql2'
 gem 'thin'
 gem 'haml-rails'
 
-gem 'kaminari'
+gem 'kaminari', '>= 1.2.1'
 gem "paperclip", "~> 3.0"
 gem "clearance"
 gem "acts_as_commentable"
