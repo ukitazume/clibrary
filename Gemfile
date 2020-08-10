@@ -11,7 +11,7 @@ gem 'haml-rails'
 
 gem 'kaminari'
 gem "paperclip", "~> 3.0"
-gem "clearance"
+gem "clearance", ">= 2.2.1"
 gem "acts_as_commentable"
 gem 'httpclient'
 
