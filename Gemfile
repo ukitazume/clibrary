@@ -1,17 +1,17 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '6.0.3.5'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
 gem 'thin'
-gem 'haml-rails'
+gem 'haml-rails', '>= 0.5.3'
 
-gem 'kaminari'
+gem 'kaminari', '>= 0.13.0'
 gem "paperclip", "~> 3.0"
-gem "clearance"
+gem "clearance", ">= 0.16.1"
 gem "acts_as_commentable"
 gem 'httpclient'
 
@@ -19,22 +19,22 @@ gem 'httpclient'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails', '~> 5.0.8'
+  gem 'coffee-rails', '~> 4.2.2'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platform => :ruby
-  gem "twitter-bootstrap-rails"
+  gem "twitter-bootstrap-rails", ">= 2.0.6"
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.0.1'
 
 group :test, :development do
   gem 'capistrano'
   gem 'capistrano_colors'
   gem 'capistrano-ext'
-  gem "rspec-rails", "~> 2.6"
+  gem "rspec-rails", "~> 2.9", ">= 2.9.0"
   gem 'spork'
   gem 'erb2haml'
   gem 'pry-rails'
